@@ -1,0 +1,11 @@
+---
+import { LINKS } from '../utils/constants'
+---
+
+<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+  <nav class="flex flex-row gap-x-10 opacity-90">
+    {LINKS.filter(link => link.enabled).map(link => (
+      <a href={link.href}>{link.name}</a>
+    ))}
+  </nav>
+</header>

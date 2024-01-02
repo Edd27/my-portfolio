@@ -1,0 +1,58 @@
+---
+import AstroIcon from '../components/icons/Astrojs.astro'
+import TailwindCssIcon from '../components/icons/TailwindCss.astro'
+import ReactIcon from '../components/icons/React.astro'
+import ProjectItem from './ProjectItem.astro';
+
+const TAGS = {
+  ASTRO: {
+    name: 'Astro',
+    class: 'bg-orange-500/30 text-white',
+    icon: AstroIcon
+  },
+  TAILWINDCSS: {
+    name: 'Tailwind CSS',
+    class: 'bg-sky-500/30 text-white',
+    icon: TailwindCssIcon
+    
+  },
+  REACT: {
+    name: 'React',
+    class: 'bg-sky-500/30 text-white',
+    icon: ReactIcon
+  }
+}
+
+const PROJECTS = [
+  {
+    title: 'Landing Page - Taquizas El Garage',
+    description: 'Landing page for Taquizas El Garage, a family business dedicated to the preparation of tacos for events. The page was made with Astro, a static site generator.',
+    link: 'https://www.taquizaselgarage.com/',
+    github: null,
+    image: '/projects/taquizas.webp',
+    tags: [TAGS.ASTRO, TAGS.TAILWINDCSS]
+  },
+  {
+    title: 'Cocktails recipes',
+    description: 'A web application to search for cocktail recipes. The application was made with React and Tailwind CSS.',
+    link: 'https://cocktails.edgarbenavides.dev/',
+    github: null,
+    image: '/projects/cocktails.webp',
+    tags: [TAGS.TAILWINDCSS, TAGS.REACT]
+  },
+  {
+    title: 'Christmas bonus calculator from Mexico',
+    description: 'A web application to calculate the Christmas bonus from Mexico. The application was made with React and Tailwind CSS.',
+    link: 'https://miaguinaldo.edgarbenavides.dev/',
+    github: null,
+    image: '/projects/miaguinaldo.webp',
+    tags: [TAGS.TAILWINDCSS, TAGS.REACT]
+  }
+]
+---
+
+{
+  PROJECTS.map(project => (
+    <ProjectItem {...project}/>
+  ))
+}

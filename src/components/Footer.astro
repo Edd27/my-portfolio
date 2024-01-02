@@ -1,0 +1,17 @@
+---
+import { LINKS } from '../utils/constants'
+---
+
+<footer class="rounded-lg shadow m-4 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm sm:text-center text-yellow-200/90">© 2023 <a href="https://edgarbenavides.dev/" class="hover:underline">Edgar Benavides</a>.
+    </span>
+    <ul class="flex flex-wrap items-center gap-x-2 mt-3 text-sm font-medium text-white/90 sm:mt-0">
+      {LINKS.filter(link => link.enabled).map(link => (
+        <li>
+          <a href={link.href} class="hover:underline">{link.name}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>

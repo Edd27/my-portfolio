@@ -1,0 +1,19 @@
+---
+import type { Tag } from "../type";
+const {title, description, tags, image} = Astro.props;
+---
+<article class="mb-24">
+  <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+  <p class="text-lg mb-4 text-pretty">{description}</p>
+  <ul class="flex gap-x-2 flex-row mb-2">
+    {tags.map((tag: Tag) => (
+      <li>
+        <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 items-center ${tag.class}`}>
+          <tag.icon class="size-4"/>
+          {tag.name}
+        </span>
+      </li>
+    ))}
+  </ul>
+  <img class="rounded-xl shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${title}`}/>
+</article>
