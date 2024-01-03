@@ -2,12 +2,12 @@ export const LINKS = [
   {
     name: 'Home',
     href: '/',
-    enabled: true
+    enabled: false
   },
   {
     name: 'About',
     href: '#about',
-    enabled: false
+    enabled: true
   },
   {
     name: 'Experience',

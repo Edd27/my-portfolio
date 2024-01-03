@@ -16,13 +16,11 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 ---
 
 <Layout title={`Edgar Benavides - Full Stack Developer with ${experience} of experience`} description="Creative collaborator ready to boost business projects. Expert in Web Applications Development. Connect to transform ideas into reality!">
-	<main class="px-4">
-		<Section>
-			<img class="rounded-full size-12 bg-sky-500 mb-4" src="/me.webp" alt="Edgar Avatar" >
-
-			<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+	<main>
+		<Section id="about" class="pt-10 lg:pt-24">
+			<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-4 pb-6 lg:pb-10">
 				Hey, I'm Edgar
-				<a href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex justify-center items-center">
+				<a href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
 					<Badge>Available for collaborate</Badge>
 				</a>
 			</h1>
@@ -33,21 +31,21 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://linkedin.com/in/edgarbenavides">
-					<LinkedInIcon class="size-4 md:size-6" />
+					<LinkedInIcon class="size-6" />
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/Edd27">
-					<GitHubIcon class="size-4 md:size-6" />
+					<GitHubIcon class="size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="mailto:contacto@edgarbenavides.dev">
-					<MailIcon class="size-4 md:size-6" />
+					<MailIcon class="size-6" />
 					contacto@edgarbenavides.dev
 				</SocialPill>
 			</nav>
 		</Section>
 
-		<Section id="experience" class="pt-24">
+		<Section id="experience" class="pt-4 lg:pt-24">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
 				<BriefcaseIcon class="size-7"/>
 				Experience
@@ -55,7 +53,7 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 			<Experience />
 		</Section>
 
-		<Section id="projects" class="pt-24">
+		<Section id="projects" class="pt-4 lg:pt-24 pb-4 lg:pb-24">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
 				<CodeIcon class="size-7"/>
 				Projects

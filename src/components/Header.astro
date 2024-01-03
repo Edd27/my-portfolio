@@ -1,11 +1,42 @@
 ---
 import { LINKS } from '../utils/constants'
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
 
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-  <nav class="flex flex-row gap-x-10 opacity-90">
+<header>
+  <Astronav>
+    <div class="w-full mx-auto lg:w-[740px] flex justify-between flex-col lg:flex-row">
+      <div class="flex items-center justify-between py-5 px-4">
+        <a href="/">
+          <img class="rounded-full size-12 bg-sky-500" src="/me.webp" alt="Edgar Avatar" >
+        </a>
+        <MenuIcon class="size-6 lg:hidden" />
+      </div>
+      <MenuItems class="hidden lg:flex">
+        <ul class="flex flex-col lg:flex-row gap-5 py-5 px-4 lg:items-center">
+          {LINKS.filter(link => link.enabled).map(link => (
+            <li>
+              <a href={link.href}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </MenuItems>
+    </div>
+  </Astronav>
+  <!-- <div class="flex justify-between items-center py-5 px-4 mx-auto">
+    <img class="rounded-full size-12 bg-sky-500" src="/me.webp" alt="Edgar Avatar" >
+    <nav class="lg:flex flex-row gap-x-10 opacity-90">
+      {LINKS.filter(link => link.enabled).map(link => (
+        <a href={link.href} class="hidden lg:block">{link.name}</a>
+      ))}
+      <button id="menuButton" type="button" class="block lg:hidden">
+        <MenuIcon />
+      </button>
+    </nav>
+  </div>
+  <menu class="top-0 left-0 w-full bg-emerald-500 lg:hidden">
     {LINKS.filter(link => link.enabled).map(link => (
-      <a href={link.href}>{link.name}</a>
+      <a href={link.href} class="">{link.name}</a>
     ))}
-  </nav>
+  </menu> -->
 </header>
