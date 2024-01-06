@@ -17,32 +17,37 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 
 <Layout title={`Edgar Benavides - Full Stack Developer with ${experience} of experience`} description="Creative collaborator ready to boost business projects. Expert in Web Applications Development. Connect to transform ideas into reality!">
 	<main>
-		<Section id="about" class="pt-10 lg:pt-24">
-			<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-4 pb-6 lg:pb-10">
-				Hey, I'm Edgar
-				<a href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
-					<Badge>Available for collaborate</Badge>
-				</a>
-			</h1>
-
-			<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
-				<span>{experience} of experience.</span> <span class="text-yellow-800 dark:text-yellow-200">Full Stack Developer.</span> <span class="text-sky-800 dark:text-sky-200">Based in México.</span> <span class="opacity-70">Focused on writing clean and efficient code.</span>
-			</h2>
-
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://linkedin.com/in/edgarbenavides">
-					<LinkedInIcon class="size-6" />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://github.com/Edd27">
-					<GitHubIcon class="size-6" />
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:contacto@edgarbenavides.dev">
-					<MailIcon class="size-6" />
-					contacto@edgarbenavides.dev
-				</SocialPill>
-			</nav>
+		<Section id="about" class="pt-10 lg:pt-24 flex md:flex-row items-center gap-10 md:gap-0">
+			<div>
+				<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-4 pb-6 lg:pb-10">
+					Hey, I'm Edgar
+					<a href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
+						<Badge>Available for collaborate</Badge>
+					</a>
+				</h1>
+	
+				<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
+					<span>{experience} of experience.</span> <span class="text-yellow-800 dark:text-yellow-200">Full Stack Developer.</span> <span class="text-sky-800 dark:text-sky-200">Based in México.</span> <span class="opacity-70">Focused on writing clean and efficient code.</span>
+				</h2>
+	
+				<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill href="https://linkedin.com/in/edgarbenavides">
+						<LinkedInIcon class="size-6" />
+						LinkedIn
+					</SocialPill>
+					<SocialPill href="https://github.com/Edd27">
+						<GitHubIcon class="size-6" />
+						GitHub
+					</SocialPill>
+					<SocialPill href="mailto:contacto@edgarbenavides.dev">
+						<MailIcon class="size-6" />
+						contacto@edgarbenavides.dev
+					</SocialPill>
+				</nav>
+			</div>
+			<div>
+				<img src="/me-funko-pop.png" alt="Funko Pop figure of Edgar Benavides" class="w-full h-full object-contain"/>
+			</div>
 		</Section>
 
 		<Section id="experience" class="pt-4 lg:pt-24">
