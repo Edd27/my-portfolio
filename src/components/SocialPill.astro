@@ -3,13 +3,13 @@ const { type = "secondary" } = Astro.props;
 ---
 <a 
   class={`
-    ${type === 'secondary' ? 'bg-white/5': 'bg-white/20 hover:bg-white/15'}
+    ${type === 'secondary' ? 'bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10': 'bg-black/20 dark:bg-white/20 hover:bg-black/15 dark:hover:bg-white/15'}
     border border-white/10 rounded-full
     flex items-center justify-center gap-x-2
     py-2 px-4
     text-sm md:text-base
     transition
-    hover:scale-110 hover:bg-white/10 
+    hover:scale-110 
   `}
   target="_blank"
   rel="noopener"
