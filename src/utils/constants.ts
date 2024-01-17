@@ -28,24 +28,64 @@ export const LINKS = [
 
 export const EXPERIENCE = [
   {
-    date: 'August 2023',
+    date: 'August 2023 - Actually',
     title: 'Full Stack Developer - Magno Technology',
-    description: 'Dynamic full-stack developer with expertise in e-commerce consultancy. Proficient in both front-end and back-end technologies, ensuring seamless integration and optimal functionality for clients in the online retail sector.',
+    responsabilities: [
+      {
+        id: 1,
+        description: "Develop and maintain server-side logic, manage databases, and ensure efficient communication between the frontend and backend."
+      },
+      {
+        id: 2,
+        description: "Collaborate with designers and other developers to ensure a consistent and high-quality user experience."
+      },
+      {
+        id: 3,
+        description: "Design and implement attractive and functional user interfaces using technologies such as HTML, CSS and JavaScript."
+      },
+      {
+        id: 4,
+        description: "Implement code optimization practices and regularly conduct performance testing."
+      },
+      {
+        id: 5,
+        description: "Integrate external services and APIs to enhance application functionality and interoperability."
+      }
+    ],
     link: null,
   },
   {
-    date: 'January 2023',
-    title: 'Freelance Web Developer',
-    description: 'Experienced web developer specializing in creating impactful landing pages for local businesses. Proven track record of delivering visually appealing and high-converting designs to enhance online presence and drive engagement.',
+    date: 'January 2023 - August 2023',
+    title: 'Web Developer - Freelancer',
+    responsabilities: [
+      {
+        id: 1,
+        description: "Built landing pages for clients, which allowed them to boost their business, increasing their sales."
+      }
+    ],
     link: null,
   },
   {
-    date: 'August 2020',
+    date: 'August 2021 - January 2023',
     title: 'Web Developer - Bitmart',
-    description: `I developed the main customer management system, which increased employee productivity and automated most of the customer registration processes.<br />
-    I resolved and implemented the interconnection between the main router API and the user management system, allowing visualization of each client's bandwidth and monitoring for network failures.<br />
-    I built a microservice for employee check-in and check-out using QR code scanning and a login interface.<br />
-    I constructed the web application for company inventory management, providing better control over the products sold and in stock.<br />`,
+    responsabilities: [
+      {
+        id: 1,
+        description: "Design and implement the REST API for information consumption allowing to develop various web applications and saving time."
+      },
+      {
+        id: 2,
+        description: "Develop the main internal system of the company that allows to manage customer information, implementing automations to save time to the users that use it."
+      },
+      {
+        id: 3,
+        description: "Implement and manage containers that facilitate the deployment of applications that are developed."
+      },
+      {
+        id: 4,
+        description: "Help to have the highest availability of services and applications, managing servers and hosted databases."
+      }
+    ],
     link: null,
   }
 ]

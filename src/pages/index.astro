@@ -10,6 +10,7 @@ import Section from '../components/Section.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import FileTypePdf from '../components/icons/FileTypePdf.astro';
 
 const yearsOfExperience = new Date().getFullYear() - 2020;
 const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'years'}`;
@@ -27,10 +28,14 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 				</h1>
 	
 				<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
-					<span>{experience} of experience.</span> <span class="text-yellow-800 dark:text-yellow-200">Full Stack Developer.</span> <span class="text-sky-800 dark:text-sky-200">Based in México.</span> <span class="opacity-70">Focused on writing clean and efficient code.</span>
+					<span>{experience} of experience.</span> <span class="text-yellow-600 dark:text-yellow-200">Full Stack Developer.</span> <span class="text-sky-800 dark:text-sky-200">Based in México.</span> <span class="opacity-70">Focused on writing clean and efficient code.</span>
 				</h2>
 	
 				<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill type="primary" href="https://drive.google.com/file/d/1-E8bXqbnMnYBRYc68ER7GYWi0pOfBF-Q/view?usp=sharing">
+						<FileTypePdf class="size-6" />
+						Resume
+					</SocialPill>
 					<SocialPill href="https://linkedin.com/in/edgarbenavides">
 						<LinkedInIcon class="size-6" />
 						LinkedIn
