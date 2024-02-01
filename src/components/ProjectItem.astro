@@ -1,6 +1,8 @@
 ---
 import type { Tag } from "../type";
+import TagComponent from "./Tag.astro";
 const {title, description, tags, image, link} = Astro.props;
+
 ---
 <article class="mb-16 lg:mb-24">
   <h3 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-200 mb-2">{title}</h3>
@@ -8,10 +10,7 @@ const {title, description, tags, image, link} = Astro.props;
   <ul class="flex gap-x-2 flex-row mb-2">
     {tags.map((tag: Tag) => (
       <li>
-        <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 items-center ${tag.class}`}>
-          <tag.icon class="size-4"/>
-          {tag.name}
-        </span>
+        <TagComponent {...tag}/>
       </li>
     ))}
   </ul>
