@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { sendQuestion } from "../../utils/sendQuestion";
 import Message from "./Message";
 
@@ -8,6 +8,8 @@ export default function EddBot() {
   >([]);
 
   const [loading, setLoading] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -67,12 +69,19 @@ export default function EddBot() {
     ]);
   }, []);
 
+  useEffect(() => {
+    if(messages.length > 1) {
+      ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest"});
+    }
+  }, [messages.length])
+
   return (
     <section className="space-y-10">
-      <div className="h-[320px] overflow-auto space-y-5">
+      <div className="h-[320px] overflow-auto space-y-5">        
         {messages.map((msg, index) => (
           <Message key={index} {...msg} />
         ))}
+        <div ref={ref} />
       </div>
       <form onSubmit={handleSubmit} className="w-full flex gap-2">
         <input
@@ -92,11 +101,11 @@ export default function EddBot() {
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            stroke-width="2"
+            strokeWidth="2"
             stroke="currentColor"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="size-7"
           >
             <path

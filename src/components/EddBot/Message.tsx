@@ -1,7 +1,7 @@
 export default function Message({
   owner,
   text,
-  time,
+  time
 }: {
   owner: "user" | "bot";
   text: string;
