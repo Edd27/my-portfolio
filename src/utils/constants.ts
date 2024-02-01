@@ -10,6 +10,11 @@ export const LINKS = [
     enabled: true
   },
   {
+    name: 'EddBot',
+    href: '#eddbot',
+    enabled: true
+  },
+  {
     name: 'Experience',
     href: '#experience',
     enabled: true

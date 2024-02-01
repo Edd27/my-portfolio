@@ -11,6 +11,8 @@ import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
 import FileTypePdf from '../components/icons/FileTypePdf.astro';
+import ChatbotIcon from '../components/icons/Chatbot.astro';
+import EddBot from '../components/EddBot/index'
 
 const yearsOfExperience = new Date().getFullYear() - 2020;
 const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'years'}`;
@@ -53,6 +55,14 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 			<div>
 				<img src="/me-funko-pop.png" alt="Funko Pop figure of Edgar Benavides" class="w-full h-full object-contain"/>
 			</div>
+		</Section>
+
+		<Section id="eddbot">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
+				<ChatbotIcon class="size-7"/>
+				EddBot
+			</h2>
+			<EddBot client:load/>
 		</Section>
 
 		<Section id="experience" class="pt-4 lg:pt-24">
