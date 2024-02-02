@@ -23,7 +23,7 @@ export default function Message({
         />
       )}
       <div
-        className={`flex flex-col w-full max-w-[320px] leading-1.5 p-4 border border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 shadow ${
+        className={`flex flex-col w-full max-w-[320px] leading-1.5 p-4 border border-white/10 bg-black/5 dark:bg-white/5 shadow ${
           owner === "user"
             ? "rounded-s-xl rounded-ee-xl"
             : "rounded-e-xl rounded-es-xl"

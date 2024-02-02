@@ -94,7 +94,7 @@ export default function EddBot() {
         <button
           type="submit"
           disabled={loading}
-          className="rounded-full bg-sky-300 dark:bg-sky-100 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center"
+          className="rounded-full bg-sky-300 dark:bg-sky-100 hover:bg-sky-400 hover:dark:bg-sky-200 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
