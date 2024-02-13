@@ -5,7 +5,7 @@ export default function Message({
 }: {
   owner: "user" | "bot";
   text: string;
-  time: string;
+  time?: string;
 }) {
   return (
     <div
@@ -30,9 +30,11 @@ export default function Message({
         }`}
       >
         <p className="text-sm font-normal text-black/80 dark:text-white/80 text-pretty">{text}</p>
-        <span className="text-sm font-normal text-black/80 dark:text-white/80 opacity-70 text-end mt-2">
-          {time}
-        </span>
+        {time && (
+          <span className="text-sm font-normal text-black/80 dark:text-white/80 opacity-70 text-end mt-2">
+            {time}
+          </span>
+        )}
       </div>
       {owner === "user" && (
         <img

@@ -81,6 +81,12 @@ export default function EddBot() {
         {messages.map((msg, index) => (
           <Message key={index} {...msg} />
         ))}
+        {loading && (
+          <Message {...{
+            owner: "bot",
+            text: "Escribiendo..."
+          }} />
+        )}
         <div ref={ref} />
       </div>
       <form onSubmit={handleSubmit} className="w-full flex gap-2">
