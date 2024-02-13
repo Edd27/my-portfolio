@@ -84,7 +84,7 @@ export default function EddBot() {
         {loading && (
           <Message {...{
             owner: "bot",
-            text: "Escribiendo..."
+            text: "Typing..."
           }} />
         )}
         <div ref={ref} />
