@@ -1,18 +1,18 @@
 ---
 import Badge from '../components/Badge.astro';
-import Layout from '../layouts/Layout.astro';
-import LinkedInIcon from '../components/icons/LinkedIn.astro';
-import GitHubIcon from '../components/icons/GitHub.astro';
-import MailIcon from '../components/icons/Mail.astro';
-import SocialPill from '../components/SocialPill.astro';
+import EddBot from '../components/EddBot/index';
 import Experience from '../components/Experience.astro';
-import Section from '../components/Section.astro';
-import BriefcaseIcon from '../components/icons/Briefcase.astro';
-import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
-import FileTypePdf from '../components/icons/FileTypePdf.astro';
+import Section from '../components/Section.astro';
+import SocialPill from '../components/SocialPill.astro';
+import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import ChatbotIcon from '../components/icons/Chatbot.astro';
-import EddBot from '../components/EddBot/index'
+import CodeIcon from '../components/icons/Code.astro';
+import FileTypePdf from '../components/icons/FileTypePdf.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Layout from '../layouts/Layout.astro';
 
 const yearsOfExperience = new Date().getFullYear() - 2021;
 const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'years'}`;
@@ -24,7 +24,7 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 			<div>
 				<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-4 pb-6 lg:pb-10">
 					Hey, I'm Edgar
-					<a href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
+					<a aria-label="Connect with Edgar Benavides on LinkedIn" href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
 						<Badge>Available for collaborate</Badge>
 					</a>
 				</h1>
@@ -34,19 +34,19 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 				</h2>
 	
 				<nav class="flex gap-4 mt-8 flex-wrap">
-					<SocialPill type="primary" href="https://drive.google.com/file/d/1-E8bXqbnMnYBRYc68ER7GYWi0pOfBF-Q/view?usp=sharing">
+					<SocialPill type="primary" href="https://drive.google.com/file/d/1-E8bXqbnMnYBRYc68ER7GYWi0pOfBF-Q/view?usp=sharing" aria-label="Read and download my resume">
 						<FileTypePdf class="size-6" />
 						Resume
 					</SocialPill>
-					<SocialPill href="https://linkedin.com/in/edgarbenavides">
+					<SocialPill href="https://linkedin.com/in/edgarbenavides" aria-label="Connect with me on LinkedIn">
 						<LinkedInIcon class="size-6" />
 						LinkedIn
 					</SocialPill>
-					<SocialPill href="https://github.com/Edd27">
+					<SocialPill href="https://github.com/Edd27" aria-label="See my projects on GitHub">
 						<GitHubIcon class="size-6" />
 						GitHub
 					</SocialPill>
-					<SocialPill href="mailto:contacto@edgarbenavides.dev">
+					<SocialPill href="mailto:contacto@edgarbenavides.dev" aria-label="Send me a mail for more information">
 						<MailIcon class="size-6" />
 						contacto@edgarbenavides.dev
 					</SocialPill>

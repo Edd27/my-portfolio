@@ -4,12 +4,12 @@ import { LINKS } from '../utils/constants'
 
 <footer class="backdrop-blur-lg w-full mx-auto lg:w-[740px] pb-10">
   <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-center">
-    <span class="text-sm sm:text-center text-yellow-600 dark:text-yellow-200">Made by <a href="https://www.linkedin.com/in/edgarbenavides" target="_blank" class="hover:underline">Edgar</a> inspired on <a href="https://github.com/midudev/porfolio.dev" target="_blank" class="hover:underline">@midudev</a> portfolio.
+    <span class="text-sm sm:text-center text-yellow-600 dark:text-yellow-200">Made by <a href="https://www.linkedin.com/in/edgarbenavides" target="_blank" class="hover:underline" aria-label="Get more info about Edgar Benavides on LinkedIn">Edgar Benavides</a> inspired on <a href="https://github.com/midudev/porfolio.dev" target="_blank" class="hover:underline" aria-label="See the portfolio template on Github by midudev">@midudev</a> portfolio.
     </span>
     <ul class="flex flex-wrap items-center justify-center lg:justify-start underline lg:no-underline gap-x-2 mt-3 text-sm font-medium opacity-80 sm:mt-0">
       {LINKS.filter(link => link.enabled).map(link => (
         <li>
-          <a href={link.href} class="hover:underline">{link.name}</a>
+          <a href={link.href} class="hover:underline" aria-label={`Go to the ${link.name} section on this page`}>{link.name}</a>
         </li>
       ))}
     </ul>
