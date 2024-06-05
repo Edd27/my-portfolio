@@ -15,7 +15,7 @@ import MailIcon from '../components/icons/Mail.astro';
 import Layout from '../layouts/Layout.astro';
 
 const yearsOfExperience = new Date().getFullYear() - 2021;
-const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'years'}`;
+const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'año' : 'años'}`;
 ---
 
 <Layout title={`Edgar Benavides - Full Stack Developer with ${experience} of experience`} description="Creative collaborator ready to boost business projects. Expert in Web Applications Development. Connect to transform ideas into reality!">
@@ -23,37 +23,37 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 		<Section id="about" class="pt-10 lg:pt-24 flex md:flex-row items-center gap-10 md:gap-0">
 			<div>
 				<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-4 pb-6 lg:pb-10">
-					Hey, I'm Edgar
+					Hola, Soy Edgar
 					<a aria-label="Connect with Edgar Benavides on LinkedIn" href="https://linkedin.com/in/edgarbenavides" target="_blank" rel="noopener" class="flex w-fit lg:justify-center items-center">
-						<Badge>Available for collaborate</Badge>
+						<Badge>Disponible</Badge>
 					</a>
 				</h1>
 	
 				<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
-					<span>{experience} of experience.</span> <span class="text-yellow-600 dark:text-yellow-200">Full Stack Developer.</span> <span class="text-sky-800 dark:text-sky-200">Based in México.</span> <span class="opacity-70">Focused on writing clean and efficient code.</span>
+					<span>{experience} de experiencia.</span> <span class="text-yellow-600 dark:text-yellow-200">Ingeniero de Software.</span> <span class="text-sky-800 dark:text-sky-200">En México.</span> <span class="opacity-70">Enfocado en la creación de soluciones web.</span>
 				</h2>
 	
 				<nav class="flex gap-4 mt-8 flex-wrap">
 					<SocialPill type="primary" href="https://drive.google.com/file/d/1-E8bXqbnMnYBRYc68ER7GYWi0pOfBF-Q/view?usp=sharing" aria-label="Read and download my resume">
 						<FileTypePdf class="size-6" />
-						Resume
+						CV
 					</SocialPill>
-					<SocialPill href="https://linkedin.com/in/edgarbenavides" aria-label="Connect with me on LinkedIn">
+					<SocialPill href="https://linkedin.com/in/edgarbenavides" aria-label="Conecta conmigo en LinkedIn">
 						<LinkedInIcon class="size-6" />
 						LinkedIn
 					</SocialPill>
-					<SocialPill href="https://github.com/Edd27" aria-label="See my projects on GitHub">
+					<SocialPill href="https://github.com/Edd27" aria-label="Mira mis proyectos en GitHub">
 						<GitHubIcon class="size-6" />
 						GitHub
 					</SocialPill>
-					<SocialPill href="mailto:contacto@edgarbenavides.dev" aria-label="Send me a mail for more information">
+					<SocialPill href="mailto:contacto@edgarbenavides.dev" aria-label="Envíame un correo para mas información">
 						<MailIcon class="size-6" />
 						contacto@edgarbenavides.dev
 					</SocialPill>
 				</nav>
 			</div>
 			<div>
-				<img src="/me-funko-pop.png" alt="Funko Pop figure of Edgar Benavides" class="w-full h-full object-contain"/>
+				<img src="/me-funko-pop.png" alt="Figura Funko Pop de Edgar Benavides" class="w-full h-full object-contain"/>
 			</div>
 		</Section>
 
@@ -68,7 +68,7 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 		<Section id="experience" class="pt-4 lg:pt-24">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
 				<BriefcaseIcon class="size-7"/>
-				Experience
+				Experiencia
 			</h2>
 			<Experience />
 		</Section>
@@ -76,7 +76,7 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'year' : 'y
 		<Section id="projects" class="pt-4 lg:pt-24 pb-4 lg:pb-24">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
 				<CodeIcon class="size-7"/>
-				Projects
+				Proyectos
 			</h2>
 			<Projects />
 		</Section>
