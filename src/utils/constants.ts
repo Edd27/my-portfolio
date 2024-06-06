@@ -27,7 +27,7 @@ export const LINKS = [
   {
     name: "Contacto",
     href: "#contact",
-    enabled: false,
+    enabled: true,
   },
 ];
 
