@@ -97,13 +97,13 @@ export default function EddBot() {
           placeholder="Escribe tu pregunta"
           name="question"
           disabled={loading}
-          className="bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 focus:bg-black/10 dark:focus:bg-white/10 rounded-full px-4 py-2 focus:outline-none w-full"
+          className="border border-transparent bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 focus:bg-black/10 dark:focus:bg-white/10 rounded-lg p-4 focus:outline-none w-full"
         />
         <button
           type="submit"
           disabled={loading}
           aria-label="Send question"
-          className="rounded-full bg-sky-300 dark:bg-sky-100 hover:bg-sky-400 hover:dark:bg-sky-200 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center">
+          className="rounded-lg bg-sky-300 dark:bg-sky-100 hover:bg-sky-400 hover:dark:bg-sky-200 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
