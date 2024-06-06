@@ -13,6 +13,7 @@
     "@astrojs/check": "0.3.4",
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "5.1.0",
+    "@emailjs/browser": "4.3.3",
     "@fontsource-variable/onest": "5.0.2",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
