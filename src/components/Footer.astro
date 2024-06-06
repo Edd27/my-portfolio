@@ -3,8 +3,8 @@ import { LINKS } from '../utils/constants'
 ---
 
 <footer class="backdrop-blur-lg w-full mx-auto lg:w-[740px] pb-10">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-center">
-    <span class="text-sm sm:text-center text-yellow-600 dark:text-yellow-200">Desarrollado por <a href="https://www.linkedin.com/in/edgarbenavides" target="_blank" class="hover:underline" aria-label="Get more info about Edgar Benavides on LinkedIn">Edgar Benavides</a> inspirado en el portfolio de <a href="https://github.com/midudev/porfolio.dev" target="_blank" class="hover:underline" aria-label="See the portfolio template on Github by midudev">@midudev</a>.
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-center lg:text-start">
+    <span class="text-sm text-yellow-600 dark:text-yellow-200">Desarrollado por <a href="https://www.linkedin.com/in/edgarbenavides" target="_blank" class="hover:underline" aria-label="Get more info about Edgar Benavides on LinkedIn">Edgar Benavides</a> inspirado en el portfolio de <a href="https://github.com/midudev/porfolio.dev" target="_blank" class="hover:underline" aria-label="See the portfolio template on Github by midudev">@midudev</a>.
     </span>
     <ul class="flex flex-wrap items-center justify-center lg:justify-start underline lg:no-underline gap-x-2 mt-3 text-sm font-medium opacity-80 sm:mt-0">
       {LINKS.filter(link => link.enabled).map(link => (
