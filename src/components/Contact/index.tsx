@@ -1,24 +1,26 @@
 import emailjs from "@emailjs/browser";
 import { useEffect, useState } from "react";
 
+const initialValues = {
+  errors: {
+    user_name: "",
+    user_email: "",
+    message: "",
+  },
+  values: {
+    user_name: "",
+    user_email: "",
+    message: "",
+  },
+};
+
 export default function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [form, setForm] = useState<{
     errors: Record<string, string>;
     values: Record<string, string>;
-  }>({
-    errors: {
-      user_name: "",
-      user_email: "",
-      message: "",
-    },
-    values: {
-      user_name: "",
-      user_email: "",
-      message: "",
-    },
-  });
+  }>(initialValues);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -105,9 +107,8 @@ export default function Contact() {
       return alert("Hubo un error al enviar el correo");
     }
 
+    setForm(initialValues);
     setSuccess(true);
-
-    formElement.reset();
   };
 
   useEffect(() => {
