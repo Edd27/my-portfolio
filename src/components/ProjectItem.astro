@@ -1,5 +1,6 @@
 ---
 import type { Tag } from "../type";
+import ExternalLinkIcon from "./icons/ExternalLink.astro";
 import TagComponent from "./Tag.astro";
 const {title, description, tags, image, link} = Astro.props;
 
@@ -16,6 +17,6 @@ const {title, description, tags, image, link} = Astro.props;
   </ul>
   <div class="rounded-xl shadow-2xl shadow-white/10 overflow-hidden relative">
     <img class="w-full h-full object-cover" src={image} alt={`Captura de pantalla del proyecto ${title}`}/>
-    <a href={link} aria-label={`Go to demo of ${title} project by Edgar Benavides`} target="_blank" rel="noopener" class="absolute top-0 left-0 w-full h-full hover:backdrop-brightness-75 flex items-center justify-center transition duration-300" />
+    <a href={link} aria-label={`Go to demo of ${title} project by Edgar Benavides`} target="_blank" rel="noopener" class="absolute top-0 left-0 w-full h-full hover:backdrop-brightness-50 flex items-center justify-center transition duration-300 opacity-0 hover:opacity-100 text-3xl text-yellow-200 font-bold whitespace-nowrap gap-4 text-center">Ver demo <ExternalLinkIcon class="w-7 h-7" /></a>
   </div>
 </article>
