@@ -149,7 +149,7 @@ export const PROJECTS = [
     description:
       "Chatbot interactivo con un modelo de inteligencia artificial (IA) utilizando únicamente lenguajes web front-end como Javascript, CSS y HTML. El modelo de IA se descarga y se almacena en caché dentro del navegador, permitiendo que el chatbot funcione sin necesidad de una conexión a internet constante.",
     link: "https://chat.edgarbenavides.dev",
-    github: null,
+    github: "https://github.com/Edd27/chatgpt-local",
     image: "/projects/chat-ia.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
@@ -176,7 +176,7 @@ export const PROJECTS = [
     description:
       'Aplicación web para transmisión en vivo de la estación de Radio Alegría Moroleón. Para más información acerca de la estación de radio, puedes visitar su sitio web en <a href="https://www.radiomoroleon.mx/Inicio/" target="_blank">Radio Alegría Moroleón</a>',
     link: "https://radio.edgarbenavides.dev/",
-    github: null,
+    github: "https://github.com/Edd27/radio-alegria-app",
     image: "/projects/radio-alegria.webp",
     tags: [TAGS.TAILWINDCSS, TAGS.NEXT],
   },
@@ -185,7 +185,7 @@ export const PROJECTS = [
     description:
       "Aplicación web para calcular tu aguinaldo como empleado en México.",
     link: "https://miaguinaldo.edgarbenavides.dev/",
-    github: null,
+    github: "https://github.com/Edd27/calculadora-aguinaldo",
     image: "/projects/mi-aguinaldo.webp",
     tags: [TAGS.TAILWINDCSS, TAGS.REACT],
   },
@@ -194,7 +194,7 @@ export const PROJECTS = [
     description:
       "Aplicación web que te permite encontrar las recetas de tus bebidas y cocteles favoritos o descubrir nuevas.",
     link: "https://cocktails.edgarbenavides.dev/",
-    github: null,
+    github: "https://github.com/Edd27/cocktails-app",
     image: "/projects/cocktails-app.webp",
     tags: [TAGS.TAILWINDCSS, TAGS.REACT],
   },

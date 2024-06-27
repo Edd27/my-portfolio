@@ -1,5 +1,5 @@
 ---
-const { type = "secondary" } = Astro.props;
+const { type = "secondary", scale = true } = Astro.props;
 ---
 <a 
   class={`
@@ -9,7 +9,7 @@ const { type = "secondary" } = Astro.props;
     py-2 px-4
     text-sm md:text-base
     transition
-    hover:scale-110 
+    ${scale && "hover:scale-110"} 
   `}
   target="_blank"
   rel="noopener"
