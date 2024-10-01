@@ -33,7 +33,19 @@ export const LINKS = [
 
 export const EXPERIENCE = [
   {
-    date: "Agosto 2023 - Actualmente",
+    date: "Septiembre 2024 - Actualmente",
+    title: "Technical Account Manager - Kosmos",
+    responsabilities: [
+      {
+        id: 1,
+        description:
+          "Implementó y administró la aplicación web para solicitudes de créditos de los clientes, mediante la plataforma Kosmos.",
+      },
+    ],
+    link: null,
+  },
+  {
+    date: "Agosto 2023 - Septiembre 2024",
     title: "Desarrollador de Software - Magno Technology",
     responsabilities: [
       {
