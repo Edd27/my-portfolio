@@ -153,9 +153,33 @@ export const TAGS = {
     classes: "bg-yellow-600 opacity-80",
     icon: "JavaScript",
   },
+  NEXTJS: {
+    name: "Next.js",
+    classes: "bg-black border border-white/30 opacity-80",
+    icon: "Next",
+  },
+  PRISMA: {
+    name: "Prisma",
+    classes: "bg-rose-600 border border-white/30 opacity-80",
+    icon: "Prisma",
+  },
+  SHADCNUI: {
+    name: "Shadcn UI",
+    classes: "bg-black border border-white/30 opacity-80",
+    icon: "ShadcnUI",
+  },
 };
 
 export const PROJECTS = [
+  {
+    title: "Next.js Boilerplate",
+    description:
+      "Boilerplate para proyectos Next.js con Tailwind CSS, Shadcn UI, Prisma, NextAuth, Typescript, Prettier y Eslint.",
+    link: "https://next-template.edgarbenavides.dev/",
+    github: "https://github.com/Edd27/next14-boilerplate",
+    image: "/projects/next-boilerplate.webp",
+    tags: [TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.PRISMA, TAGS.SHADCNUI],
+  },
   {
     title: "Chat IA",
     description:
