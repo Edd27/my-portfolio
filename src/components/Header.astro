@@ -3,24 +3,22 @@ import { Astronav, MenuIcon, MenuItems } from "astro-navbar";
 import { LINKS } from '../utils/constants';
 ---
 
-<header>
-  <Astronav>
-    <div class="w-full mx-auto lg:w-[740px] flex justify-between flex-col lg:flex-row">
-      <div class="flex items-center justify-between py-5 px-4">
-        <a href="/" aria-label="Return to start og this page">
-          <img class="rounded-full size-12 bg-sky-500" src="/me.webp" alt="Edgar Avatar" >
-        </a>
-        <MenuIcon class="size-6 lg:hidden" />
-      </div>
-      <MenuItems class="hidden lg:flex">
-        <ul class="flex flex-col lg:flex-row gap-5 py-5 px-4 lg:items-center">
-          {LINKS.filter(link => link.enabled).map(link => (
-            <li>
-              <a href={link.href} aria-label={`Go to ${link.name} section on this page`} class="hover:underline hover:text-yellow-600 hover:dark:text-yellow-200">{link.name}</a>
-            </li>
-          ))}
-        </ul>
-      </MenuItems>
+<Astronav>
+  <header class="z-50 lg:border border-white/10 w-full mx-auto lg:w-[740px] flex justify-center flex-col lg:flex-row lg:shadow-xl backdrop-blur-[10px] lg:rounded-full lg:mt-10 sticky top-0 lg:top-4 lg:backdrop-brightness-75 transition overflow-hidden">
+    <div class="flex items-center justify-between py-5 px-4 lg:hidden">
+      <a href="/" aria-label="Return to start og this page">
+        <img class="rounded-full min-w-12 size-12 bg-sky-500" src="/me.webp" alt="Edgar Avatar" >
+      </a>
+      <MenuIcon class="size-6" />
     </div>
-  </Astronav>
-</header>
+    <MenuItems class="hidden lg:flex">
+      <ul class="flex flex-col lg:flex-row lg:gap-5 lg:py-2 lg:px-6 lg:items-center lg:justify-between w-full lg:w-[740px]">
+        {LINKS.filter(link => link.enabled).map(link => (
+          <li class="hover:bg-black/10 lg:hover:bg-inherit px-4 py-2 hover:underline hover:text-yellow-600 hover:dark:text-yellow-200 grid">
+            <a href={link.href} aria-label={`Go to ${link.name} section on this page`}>{link.name}</a>
+          </li>
+        ))}
+      </ul>
+    </MenuItems>
+  </header>
+</Astronav>
