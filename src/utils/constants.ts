@@ -33,19 +33,7 @@ export const LINKS = [
 
 export const EXPERIENCE = [
   {
-    date: "Septiembre 2024 - Actualmente",
-    title: "Technical Account Manager - Kosmos",
-    responsabilities: [
-      {
-        id: 1,
-        description:
-          "Implementó y administró la aplicación web para solicitudes de créditos de los clientes, mediante la plataforma Kosmos.",
-      },
-    ],
-    link: null,
-  },
-  {
-    date: "Agosto 2023 - Septiembre 2024",
+    date: "Agosto 2023 - Actualidad",
     title: "Desarrollador de Software - Magno Technology",
     responsabilities: [
       {
@@ -125,17 +113,17 @@ export const EXPERIENCE = [
 export const TAGS = {
   TAILWINDCSS: {
     name: "Tailwind CSS",
-    classes: "bg-sky-500 opacity-80",
+    classes: "bg-sky-500 opacity-80 text-white",
     icon: "TailwindCss",
   },
   REACT: {
     name: "React",
-    classes: "bg-sky-600 opacity-80",
+    classes: "bg-sky-600 opacity-80 text-white",
     icon: "React",
   },
   NEXT: {
     name: "Next.js",
-    classes: "bg-black border border-white/30 opacity-80",
+    classes: "bg-black border border-white/30 opacity-80 text-white",
     icon: "Next",
   },
   CSS: {
@@ -155,22 +143,31 @@ export const TAGS = {
   },
   NEXTJS: {
     name: "Next.js",
-    classes: "bg-black border border-white/30 opacity-80",
+    classes: "bg-black border border-white/30 opacity-80 text-white",
     icon: "Next",
   },
   PRISMA: {
     name: "Prisma",
-    classes: "bg-rose-600 border border-white/30 opacity-80",
+    classes: "bg-rose-600 border border-white/30 opacity-80 text-white",
     icon: "Prisma",
   },
   SHADCNUI: {
     name: "Shadcn UI",
-    classes: "bg-black border border-white/30 opacity-80",
+    classes: "bg-black border border-white/30 opacity-80 text-white",
     icon: "ShadcnUI",
   },
 };
 
 export const PROJECTS = [
+  {
+    title: "La Joyita Landscaping",
+    description:
+      "Landing page diseñada e implementada a la medida en base a los requerimientos del cliente. Permitiendo modificar el contenido de la landing page desde un panel de administrador, protegido con usuario y contraseña.",
+    link: "https://la-joyita-landscaping.vercel.app/",
+    github: null,
+    image: "/projects/la-joyita.webp",
+    tags: [TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.PRISMA, TAGS.SHADCNUI],
+  },
   {
     title: "Next.js Boilerplate",
     description:
@@ -224,6 +221,15 @@ export const PROJECTS = [
     github: "https://github.com/Edd27/calculadora-aguinaldo",
     image: "/projects/mi-aguinaldo.webp",
     tags: [TAGS.TAILWINDCSS, TAGS.REACT],
+  },
+  {
+    title: "Taquizas el Garage",
+    description:
+      'Landing page diseñada e implementada a la medida en base a los requerimientos del cliente. Permitiendo agregar contenido multimedia desde su panel de Meta Business. En colaboración con el equipo de desarrollo: <a href="https://www.linkedin.com/in/marcos-lp/" target="_blank" class="underline text-sky-800 dark:text-sky-200">Marcos Lopez</a>, <a href="https://www.linkedin.com/in/ia-grajeda/" target="_blank" class="underline text-sky-800 dark:text-sky-200">Alejandro Grajeda</a> y <a href="https://www.linkedin.com/in/martin-lara-peredo-41a5b1287/" target="_blank" class="underline text-sky-800 dark:text-sky-200">Martin Lara</a>',
+    link: "https://www.taquizaselgarage.com/",
+    github: null,
+    image: "/projects/taquizas-el-garage.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWINDCSS],
   },
   {
     title: "Cocktails",
