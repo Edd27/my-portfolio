@@ -6,4 +6,9 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: "static",
+  vite: {
+    preview: {
+      allowedHosts: ["edgarbenavides.dev"]
+    }
+  }
 });
