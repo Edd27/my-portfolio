@@ -10,4 +10,4 @@ RUN npm install -g astro
 
 EXPOSE 4321
 
-CMD ["astro", "preview", "--host", "0.0.0.0"]
+CMD ["astro", "preview", "--host", "0.0.0.0", "--allowed-hosts", "all"]
