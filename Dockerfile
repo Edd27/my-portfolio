@@ -1,13 +1,15 @@
-FROM node:20-alpine
+FROM node:20-alpine AS builder
 
 WORKDIR /app
-
 COPY . .
-
 RUN npm ci && npm run build
 
-RUN npm install -g astro
+FROM nginx:alpine
 
-EXPOSE 4321
+RUN rm -rf /usr/share/nginx/html/*
 
-CMD ["astro", "preview", "--host", "0.0.0.0", "--allowed-hosts", "all"]
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
