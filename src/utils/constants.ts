@@ -10,8 +10,8 @@ export const LINKS = [
     enabled: true,
   },
   {
-    name: "EddBot",
-    href: "#eddbot",
+    name: "Chat",
+    href: "#chatbot",
     enabled: true,
   },
   {
@@ -163,7 +163,7 @@ export const PROJECTS = [
     title: "La Joyita Landscaping",
     description:
       "Landing page diseñada e implementada a la medida en base a los requerimientos del cliente. Permitiendo modificar el contenido de la landing page desde un panel de administrador, protegido con usuario y contraseña.",
-    link: "https://la-joyita-landscaping.vercel.app/",
+    link: "https://lajoyitalandscaping.com/",
     github: null,
     image: "/projects/la-joyita.webp",
     tags: [TAGS.NEXTJS, TAGS.TAILWINDCSS, TAGS.PRISMA, TAGS.SHADCNUI],

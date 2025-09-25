@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { sendQuestion } from "../../utils/sendQuestion";
 import Message from "./Message";
 
-export default function EddBot() {
+export default function ChatBot() {
   const [messages, setMessages] = useState<
     { owner: "user" | "bot"; text: string; time: string }[]
   >([]);
@@ -35,10 +35,10 @@ export default function EddBot() {
           minute: "numeric",
           hour12: true,
         }).format(new Date()),
-      }),
+      })
     );
 
-    const { answer } = await sendQuestion(question);
+    const { answer } = await sendQuestion(question, { promptVersion: "v1" });
 
     setLoading(false);
 
@@ -51,22 +51,35 @@ export default function EddBot() {
           minute: "numeric",
           hour12: true,
         }).format(new Date()),
-      }),
+      })
     );
   }
 
   useEffect(() => {
-    setMessages([
-      {
-        owner: "bot",
-        text: "Hola! como asistente personal de Edgar Benavides. Estoy aqui para responder todas tus preguntas que tengas acerca de su experiencia y trabajo.",
-        time: new Intl.DateTimeFormat("es-MX", {
-          hour: "numeric",
-          minute: "numeric",
-          hour12: true,
-        }).format(new Date()),
-      },
-    ]);
+    const initialMessage = async () => {
+      setLoading(true);
+
+      const { answer } = await sendQuestion(
+        "Por ahora, no necesito la respuesta a una pregunta, solo dame un cordial saludo, amigable como si fueras Edgar Benavides",
+        { promptVersion: "v1" }
+      );
+
+      setMessages((messages) =>
+        messages.concat({
+          owner: "bot",
+          text: answer,
+          time: new Intl.DateTimeFormat("es-MX", {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+          }).format(new Date()),
+        })
+      );
+
+      setLoading(false);
+    };
+
+    initialMessage();
   }, []);
 
   useEffect(() => {
@@ -103,7 +116,8 @@ export default function EddBot() {
           type="submit"
           disabled={loading}
           aria-label="Send question"
-          className="rounded-lg bg-sky-300 dark:bg-sky-100 hover:bg-sky-400 hover:dark:bg-sky-200 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center">
+          className="rounded-lg bg-sky-300 dark:bg-sky-100 hover:bg-sky-400 hover:dark:bg-sky-200 text-sky-900 dark:text-sky-800 px-1.5 py-1 flex items-center justify-center"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -114,7 +128,8 @@ export default function EddBot() {
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-7">
+            className="size-7"
+          >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z" />
             <path d="M6.5 12h14.5" />

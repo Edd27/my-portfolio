@@ -1,7 +1,7 @@
 ---
 import Badge from '../components/Badge.astro';
+import ChatBot from '../components/ChatBot/index';
 import Contact from '../components/Contact/index';
-import EddBot from '../components/EddBot/index';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
 import Section from '../components/Section.astro';
@@ -67,12 +67,12 @@ const experience = `${yearsOfExperience} ${yearsOfExperience === 1 ? 'año' : 'a
 			</div>
 		</Section>
 
-		<Section id="eddbot">
+		<Section id="chatbot">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
 				<ChatbotIcon class="size-7"/>
-				EddBot
+				Chat
 			</h2>
-			<EddBot client:load/>
+			<ChatBot client:load/>
 		</Section>
 
 		<Section id="experience" class="pt-4 lg:pt-24">
